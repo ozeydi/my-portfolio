@@ -1,10 +1,11 @@
-import Header from "@/components/shared/Header";
+import BaseLayout from "@/components/layouts/BaseLayout";
 
 const Cv = () => {
   return (
     <>
-      <Header />
-      <h1>Cv page</h1>
+      <BaseLayout>
+        <h1>Cv page</h1>
+      </BaseLayout>
     </>
   );
 };
