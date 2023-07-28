@@ -1,8 +1,14 @@
 import BaseLayout from "@/components/layouts/BaseLayout";
+import Link from "next/link";
 import axios from "axios";
+
 const Portfolios = ({ posts }) => {
   const renderPosts = () => {
-    return posts.map((elt) => <li key={elt.id}>{elt.title}</li>);
+    return posts.map((elt) => (
+      <li key={elt.id}>
+        <Link href={"/portfolios/" + elt.id}> {elt.title}</Link>
+      </li>
+    ));
   };
   return (
     <>
