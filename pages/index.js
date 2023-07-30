@@ -1,7 +1,38 @@
 import React from "react";
 import BaseLayout from "../components/layouts/BaseLayout";
 import { Container, Row, Col } from "reactstrap";
+import { TypeAnimation } from "react-type-animation";
 
+const roles = [
+  "Fullstack web Developer",
+  1000,
+  "Team player",
+  1000,
+  "Javascipt",
+  1000,
+  "ES6",
+  1000,
+  "Typescript",
+  1000,
+  "React js",
+  1000,
+  "Redux",
+  1000,
+  "Mobx",
+  1000,
+  "Vue Js",
+  1000,
+  "React native",
+  1000,
+  "Node js",
+  1000,
+  "Express",
+  1000,
+  "Mongodb",
+  1000,
+  "Agile Scrum",
+  1000,
+];
 class Index extends React.Component {
   render() {
     return (
@@ -38,6 +69,13 @@ class Index extends React.Component {
                     through the years!
                   </h1>
                 </div>
+                <TypeAnimation
+                  sequence={roles}
+                  style={{ fontSize: "2em", display: "inline-block" }}
+                  wrapper="span"
+                  repeat={Infinity}
+                  cursor={false}
+                />
                 <div className="hero-welcome-bio">
                   <h1>Let's take a look on my work.</h1>
                 </div>
