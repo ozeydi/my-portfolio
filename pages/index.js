@@ -71,7 +71,12 @@ class Index extends React.Component {
                 </div>
                 <TypeAnimation
                   sequence={roles}
-                  style={{ fontSize: "2em", display: "inline-block" }}
+                  style={{
+                    fontSize: "2em",
+                    color: "white",
+                    fontWeight: "bold",
+                    letterSpacing: "2px",
+                  }}
                   wrapper="span"
                   repeat={Infinity}
                   cursor={false}
