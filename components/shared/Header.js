@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-} from "reactstrap";
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
 
 const BsNavLink = (props) => {
   const { href, title } = props;
@@ -30,9 +23,11 @@ const Header = () => {
         dark
         expand="md"
       >
-        <Link href="/" legacyBehavior>
-          <a className="port-navbar-brand">Oussama ZEYDI</a>
-        </Link>
+        <div className="navbar-brand">
+          <Link href="/" legacyBehavior>
+            <a className="port-navbar-brand">Oussama ZEYDI</a>
+          </Link>
+        </div>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
