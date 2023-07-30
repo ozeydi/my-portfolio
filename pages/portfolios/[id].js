@@ -1,4 +1,5 @@
 import BaseLayout from "@/components/layouts/BaseLayout";
+import BasePage from "@/components/BasePage";
 import axios from "axios";
 import { useRouter } from "next/router";
 
@@ -7,9 +8,11 @@ const PortfolioDetail = ({ portfolio }) => {
 
   return (
     <BaseLayout>
-      <h1>{portfolio.title}</h1>
-      <p>BODY: {portfolio.body}</p>
-      <p>BODY: {portfolio.id}</p>
+      <BasePage>
+        <h1>{portfolio.title}</h1>
+        <p>BODY: {portfolio.body}</p>
+        <p>BODY: {portfolio.id}</p>
+      </BasePage>
     </BaseLayout>
   );
 };

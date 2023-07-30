@@ -1,4 +1,5 @@
 import BaseLayout from "@/components/layouts/BaseLayout";
+import BasePage from "@/components/BasePage";
 import Link from "next/link";
 import axios from "axios";
 
@@ -13,8 +14,10 @@ const Portfolios = ({ posts }) => {
   return (
     <>
       <BaseLayout>
-        <h1>Portfolios page</h1>
-        <ul>{renderPosts()}</ul>
+        <BasePage>
+          <h1>Portfolios page</h1>
+          <ul>{renderPosts()}</ul>
+        </BasePage>
       </BaseLayout>
     </>
   );

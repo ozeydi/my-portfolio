@@ -1,12 +1,13 @@
 import BaseLayout from "@/components/layouts/BaseLayout";
+import BasePage from "@/components/BasePage";
 
 const Blogs = () => {
   return (
-    <>
-      <BaseLayout>
+    <BaseLayout>
+      <BasePage>
         <h1>Blogs page</h1>
-      </BaseLayout>
-    </>
+      </BasePage>
+    </BaseLayout>
   );
 };
 
