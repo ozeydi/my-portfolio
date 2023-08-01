@@ -9,7 +9,7 @@ const PortfolioDetail = () => {
   const [error, setError] = useState();
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch("/api/v1/posts/" + router.query.id);
+      const res = await fetch("/api/posts/" + router.query.id);
       const result = await res.json();
       if (res.status != 200) {
         setError(result);

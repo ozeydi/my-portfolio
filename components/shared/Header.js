@@ -12,7 +12,7 @@ const BsNavLink = (props) => {
 };
 
 const LoginLink = () => (
-  <span className="nav-link port-navbar-link clickable">Login</span>
+  <BsNavLink href="/api/auth/login" title="Login"></BsNavLink>
 );
 
 const LogoutLink = () => (

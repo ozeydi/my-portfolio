@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import BaseLayout from "@/components/layouts/BaseLayout";
 import BasePage from "@/components/BasePage";
 import Link from "next/link";
-import useSWR from "swr";
 
 const Portfolios = () => {
   const [data, setData] = useState([]);
@@ -10,7 +9,7 @@ const Portfolios = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch("/api/v1/posts");
+      const res = await fetch("/api/posts");
       const result = await res.json();
       if (res.status != 200) {
         setError(result);
