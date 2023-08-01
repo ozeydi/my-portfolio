@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { useUser } from "@auth0/nextjs-auth0/client";
 import BaseLayout from "@/components/layouts/BaseLayout";
 import BasePage from "@/components/BasePage";
-import { useRouter } from "next/router";
 
 const PortfolioDetail = () => {
   const router = useRouter();
+  const { user, isLoading } = useUser();
+
   const [data, setData] = useState([]);
   const [error, setError] = useState();
+
   useEffect(() => {
     async function fetchData() {
       const res = await fetch("/api/posts/" + router.query.id);
@@ -22,7 +26,7 @@ const PortfolioDetail = () => {
   }, []);
 
   return (
-    <BaseLayout>
+    <BaseLayout user={user} loading={isLoading}>
       <BasePage>
         {data && (
           <>

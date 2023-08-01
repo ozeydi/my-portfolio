@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import { useUser } from "@auth0/nextjs-auth0/client";
 import BaseLayout from "@/components/layouts/BaseLayout";
 import BasePage from "@/components/BasePage";
 import Link from "next/link";
 
 const Portfolios = () => {
+  const { user, isLoading } = useUser();
+
   const [data, setData] = useState([]);
   const [error, setError] = useState();
 
@@ -30,7 +33,7 @@ const Portfolios = () => {
   };
   return (
     <>
-      <BaseLayout>
+      <BaseLayout user={user} loading={isLoading}>
         <BasePage>
           <h1>Portfolios page</h1>
           {data && <ul>{renderData()}</ul>}
