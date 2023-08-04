@@ -38,7 +38,12 @@ const Index = () => {
   const { user, isLoading } = useUser();
 
   return (
-    <BaseLayout user={user} loading={isLoading} className="cover">
+    <BaseLayout
+      user={user}
+      loading={isLoading}
+      navClass="transparent"
+      className="cover"
+    >
       <div className="main-section">
         <div className="background-image">
           <img src="/images/background-index.png" />

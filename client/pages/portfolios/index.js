@@ -20,7 +20,7 @@ const Portfolios = ({ portfolios }) => {
   return (
     <>
       <BaseLayout user={user} loading={isLoading}>
-        <BasePage className="portfolio-page">
+        <BasePage header="Portfolios" className="portfolio-page">
           <Row>
             {portfolios.map((elt) => {
               return (
