@@ -1,9 +1,10 @@
 import axios from "axios";
 
+const ApiUrl = process.env.NEXT_PUBLIC_PORTFOLIO_API_URL;
 export const getAll = () => {
-  return axios.get("http://localhost:3001/api/portfolios");
+  return axios.get(`${ApiUrl}/portfolios`);
 };
 
-export const getPortfolio = (req, res) => {
-  return axios.get(`http://localhost:3001/api/portfolios/${req.params.id}`);
+export const getPortfolioById = (id) => {
+  return axios.get(`${ApiUrl}/portfolios/${id}`);
 };
