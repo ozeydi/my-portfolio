@@ -5,6 +5,7 @@ const ObjectId = Schema.ObjectId;
 
 const PortfolioSchema = new Schema({
   title: { type: String, required: true, maxlength: 100 },
+  userId: { type: String, required: true },
   company: { type: String, required: true, maxlength: 50 },
   location: { type: String, required: true },
   jobTitle: { type: String, required: true },

@@ -92,6 +92,7 @@ const PortfolioForm = ({ onSubmit }) => {
             name="endDate"
             render={({}) => (
               <DatePicker
+                disabled={!endDate}
                 placeholderText="Select end date"
                 onChange={(date) => {
                   setValue("endDate", date);
@@ -102,6 +103,32 @@ const PortfolioForm = ({ onSubmit }) => {
             )}
           />
         </div>
+      </div>
+      <div className="form-group">
+        {endDate && (
+          <button
+            type="button"
+            className="btn btn-danger"
+            onClick={() => {
+              setValue("endDate", null);
+              setEndDate(null);
+            }}
+          >
+            Currently working
+          </button>
+        )}
+        {!endDate && (
+          <button
+            type="button"
+            className="btn btn-success"
+            onClick={() => {
+              setValue("endDate", new Date());
+              setEndDate(new Date());
+            }}
+          >
+            Set End Date
+          </button>
+        )}
       </div>
       <button type="submit" className="btn btn-primary">
         Create

@@ -8,3 +8,8 @@ export const getAll = () => {
 export const getPortfolioById = (id) => {
   return axios.get(`${ApiUrl}/portfolios/${id}`);
 };
+
+export const addPortfolio = (data) => {
+  console.log("on add", data);
+  return axios.post(`${ApiUrl}/portfolios`, data);
+};

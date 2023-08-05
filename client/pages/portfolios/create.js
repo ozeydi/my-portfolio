@@ -6,6 +6,7 @@ import BasePage from "@/components/BasePage";
 import { Row, Col } from "reactstrap";
 import PortfolioForm from "@/components/PortfolioForm";
 import { useRouter } from "next/router";
+import createPortfolio from "../api/portfolios";
 
 const Create = ({ session }) => {
   const router = useRouter();
@@ -23,8 +24,8 @@ const Create = ({ session }) => {
     }
   }, []);
 
-  const createPortfolio = (data) => {
-    console.log(data);
+  const onCreatePortfolio = (data) => {
+    createPortfolio(data);
   };
   const RenderCreatePage = () => {
     if (
@@ -37,7 +38,7 @@ const Create = ({ session }) => {
             <BasePage header="Create Portfolio">
               <Row>
                 <Col md="8">
-                  <PortfolioForm onSubmit={createPortfolio} />
+                  <PortfolioForm onSubmit={onCreatePortfolio} />
                 </Col>
               </Row>
             </BasePage>
